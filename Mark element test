@@ -1,0 +1,50 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+void Mark(int *);
+bool isMarked(int *);
+vector<int*>arr;
+vector<int> :: iterator it;
+
+int main()
+{
+    vector<int>test;
+    for(int i=0; i<10; i++)
+    {
+        test.push_back(i);
+    }
+    for(int i=0; i<10; i++)
+    {
+        if(test[i] == 5)
+        {
+            Mark(&test[i]);
+        }
+    }
+    for(int i=0; i<10; i++)
+    {
+        if(isMarked(&test[i])
+        {
+            cout << test[i] << " is marked!" << endl;
+        }
+    }
+    return 0;
+}
+
+void Mark(int *m)
+{
+    arr.push_back(m);
+}
+
+bool isMarked(int *m)
+{
+    it = find(arr.begin(), arr.end(), m);
+    if(it != arr.end())
+    {
+        return true;
+    }
+    else 
+    {
+        return false;
+    }
+}
